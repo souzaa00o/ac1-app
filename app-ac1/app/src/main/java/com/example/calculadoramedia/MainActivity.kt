@@ -13,11 +13,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
     }
 
-    fun proc(compoenente:View){
+    fun proc(componente:View){
         val nome = tbxNome.text;
-        val n1 = tbxNota1;
-        val n2 = tbxNota2;
-        val media = (n1+n2)/2
+        val n1 = tbxNota1.text.toString().toInt()
+        val n2 = tbxNota2.text.toString().toInt()
+        val media:Int = (n1+n2)/2
 
         if(nome == null || n1 < 0 || n2 < 0){
             if(media < 7){
